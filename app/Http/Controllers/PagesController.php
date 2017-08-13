@@ -7,16 +7,23 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
     public function getIndex(){
-        return view('pages.welcome');
+        return view('pages.home');
     }
     public function getAbout(){
         return view('pages.about');
     }
     public function getContact(){
-        $first = 'soujanya';
-        $last = 'pabbathi';
-        $fullname = '$first'.''.'$last';
-        return view('pages.contact')->with("fullname",$fullname);
+
+        $tasks = [
+           'go to costco',
+           'check my eye site',
+           'get new glasses'
+
+        ];
+
+        return view('pages.contact',compact('tasks'));
+
 
     }
+
 }

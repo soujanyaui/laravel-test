@@ -10,12 +10,16 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Auth::routes();
+Route::get('/send', 'mailController@send');
 Route::get('/contact', 'PagesController@getContact');
 Route::get('/about', 'PagesController@getAbout');
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'PagesController@getIndex');
 Route::get('/', 'PagesController@getIndex');
 
 
-Auth::routes();
+
+
 
 
