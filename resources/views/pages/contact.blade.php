@@ -7,7 +7,7 @@
 
     <title>Laravel</title>
     {{--<link href="{{asset('css/video-js.css')}}" rel="stylesheet">--}}
-   <link href="{{asset('css/app.css')}}" type="text/css" rel="stylesheet">
+   {{--<link href="{{mix('css/app.css')}}" type="text/css" rel="stylesheet">--}}
    {{--<link href="{{asset('node_modules/font-awesome/scss/font-awesome.scss')}}" type="text/css" rel="stylesheet">--}}
 </head>
 <body>
@@ -21,18 +21,21 @@
             </ul>
         </div>
         <i class="fa fa-cc" aria-hidden="true"></i>
-        <video id="video1" class="video-js vjs-default-skin vjs-big-play-centered" height="300" width="600" controls data-setup="{}">
-            <source src="http://vjs.zencdn.net/v/oceans.mp4" type='video/mp4'>
-            <source src="http://vjs.zencdn.net/v/oceans.webm" type='video/webm'>
-            <source src="http://vjs.zencdn.net/v/oceans.ogv" type='video/ogg'>
-            <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that
-                <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
-        </video>
+        <div class="container">
+            <h2>Simple Collapsible</h2>
+            <p>Click on the button to toggle between showing and hiding content.</p>
+            <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Simple collapsible</button>
+            <div id="demo" class="collapse">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+        </div>
     </div>
 </div>
 
 {{--<script src="{{asset('js/video.js/video.js')}} type="text/javascript"></script>--}}
 
-<script src="{{asset('js/app.js')}}" type="text/javascript"></script>
+{{--<script src="{{mix('js/app.js')}}" type="text/javascript"></script>--}}
 </body>
 </html>
